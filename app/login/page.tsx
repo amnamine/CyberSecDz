@@ -27,7 +27,7 @@ export default function LoginPage() {
       
       if (res.ok) {
         localStorage.setItem('auth_token', data.token);
-        router.push('/dashboard/user'); // generic redirect
+        router.push('/dashboard');
       } else {
         setError(data.error || 'Login failed');
       }
@@ -47,7 +47,7 @@ export default function LoginPage() {
     const data = await res.json();
     if (res.ok) {
       localStorage.setItem('auth_token', data.token);
-      router.push('/dashboard/user');
+      router.push('/dashboard');
     }
   };
 

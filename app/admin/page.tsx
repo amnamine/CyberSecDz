@@ -1,10 +1,17 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { ShieldAlert, Users, AlertTriangle, Search, Activity, Filter, CheckCircle2, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function AdminDashboard() {
   const { t } = useLanguage();
+  const router = useRouter();
+
+  const handleLogout = () => {
+    localStorage.removeItem('admin_token');
+    router.push('/admin-auth');
+  };
 
   const mockQueue = [
     { id: 'DZ-1045', user: 'Mohammed Ali', type: 'Hacked Social Media', risk: 'High', status: 'pending', time: '10 mins ago' },
@@ -27,6 +34,13 @@ export default function AdminDashboard() {
             <div className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></div>
             {t('admin.status.online')}
           </div>
+          <button
+            type="button"
+            onClick={handleLogout}
+            className="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-900/60 text-slate-200 text-sm font-medium transition-colors hover:bg-slate-800"
+          >
+            Logout
+          </button>
         </div>
       </div>
 

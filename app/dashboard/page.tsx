@@ -1,11 +1,18 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { ShieldCheck, Clock, ShieldAlert, ArrowRight, UserCircle, Search } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function UserDashboard() {
   const { t } = useLanguage();
+  const router = useRouter();
+
+  const handleLogout = () => {
+    localStorage.removeItem('auth_token');
+    router.push('/login');
+  };
 
   const mockCases = [
     { id: 'DZ-1044', type: 'Hacked Social Media', date: 'Today', status: 'pending', risk: 'High' },
@@ -20,9 +27,18 @@ export default function UserDashboard() {
           <h1 className="text-3xl font-bold text-white mb-2 neon-text">{t('dashboard.title')}</h1>
           <p className="text-slate-400">{t('dashboard.desc')}</p>
         </div>
-        <Link href="/report" className="h-10 inline-flex items-center justify-center rounded-lg bg-cyan-600 px-4 font-medium text-white shadow transition-all hover:bg-cyan-500">
-          <ShieldAlert className="mr-2 h-4 w-4" /> {t('dashboard.btn.new')}
-        </Link>
+        <div className="flex gap-2">
+          <Link href="/report" className="h-10 inline-flex items-center justify-center rounded-lg bg-cyan-600 px-4 font-medium text-white shadow transition-all hover:bg-cyan-500">
+            <ShieldAlert className="mr-2 h-4 w-4" /> {t('dashboard.btn.new')}
+          </Link>
+          <button
+            type="button"
+            onClick={handleLogout}
+            className="h-10 inline-flex items-center justify-center rounded-lg border border-slate-700 bg-slate-900/50 px-4 font-medium text-slate-200 transition-all hover:bg-slate-800"
+          >
+            Logout
+          </button>
+        </div>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6 mb-8">

@@ -49,7 +49,11 @@ async function initializeDatabase() {
 
   const defaultUsers = [
     { username: 'admin', password: 'admin', role: 'admin' },
+    { username: 'admin2', password: 'admin2', role: 'admin' },
+    { username: 'admin3', password: 'admin3', role: 'admin' },
     { username: 'user', password: 'user', role: 'user' },
+    { username: 'user2', password: 'user2', role: 'user' },
+    { username: 'user3', password: 'user3', role: 'user' },
   ];
 
   for (const account of defaultUsers) {
