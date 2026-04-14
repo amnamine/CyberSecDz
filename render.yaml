@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: algeria-security-platform
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:combined
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: JWT_SECRET
+        generateValue: true
+      - key: EXPRESS_PORT
+        value: 10001

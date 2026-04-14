@@ -9,6 +9,7 @@
     "build": "next build",
     "start": "next start",
     "start:backend": "node backend/server.mjs",
+    "start:combined": "concurrently \"next start\" \"node backend/server.mjs\"",
     "lint": "eslint"
   },
   "dependencies": {
