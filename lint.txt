@@ -1,0 +1,85 @@
+﻿
+E:\algeria-security-platform\app\admin-auth\page.tsx
+  37:14  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\algeria-security-platform\app\admin\page.tsx
+  105:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\algeria-security-platform\app\api\admin\cases\[id]\route.ts
+   5:18  warning  'req' is defined but never used           @typescript-eslint/no-unused-vars
+  32:19  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\algeria-security-platform\app\api\admin\cases\route.ts
+  5:18  warning  'req' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\algeria-security-platform\app\api\auth\admin-login\route.ts
+  20:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\algeria-security-platform\app\api\auth\login\route.ts
+  26:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\algeria-security-platform\app\api\auth\register\route.ts
+  23:28  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\algeria-security-platform\app\api\cases\route.ts
+   4:27  warning  'request' is defined but never used       @typescript-eslint/no-unused-vars
+  41:19  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\algeria-security-platform\app\dashboard\page.tsx
+   94:70  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  103:60  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+E:\algeria-security-platform\app\layout.tsx
+  36:19  error  Do not use an `<a>` element to navigate to `/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+E:\algeria-security-platform\app\login\page.tsx
+  34:14  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\algeria-security-platform\app\register\page.tsx
+   6:34  warning  'Mail' is defined but never used  @typescript-eslint/no-unused-vars
+  63:14  warning  'err' is defined but never used   @typescript-eslint/no-unused-vars
+
+E:\algeria-security-platform\app\report\page.tsx
+  5:40  warning  'AlertTriangle' is defined but never used  @typescript-eslint/no-unused-vars
+
+E:\algeria-security-platform\components\AnimatedText.tsx
+  18:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+E:\algeria-security-platform\components\AnimatedText.tsx:18:5
+  16 |
+  17 |   useEffect(() => {
+> 18 |     setMounted(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  19 |   }, []);
+  20 |
+  21 |   if (!mounted) {  react-hooks/set-state-in-effect
+
+E:\algeria-security-platform\context\LanguageContext.tsx
+  35:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+E:\algeria-security-platform\context\LanguageContext.tsx:35:5
+  33 |
+  34 |   useEffect(() => {
+> 35 |     setMounted(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  36 |     const savedLang = localStorage.getItem('languagePreference') as Language | null;
+  37 |     if (savedLang && (savedLang === 'EN' || savedLang === 'FR' || savedLang === 'AR')) {
+  38 |       handleSetLanguage(savedLang);  react-hooks/set-state-in-effect
+
+E:\algeria-security-platform\proxy.ts
+  6:11  warning  'pathname' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 20 problems (11 errors, 9 warnings)
+

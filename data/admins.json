@@ -1,0 +1,26 @@
+[
+  {
+    "id": "admin-1",
+    "username": "security_admin",
+    "password": "$2b$10$v1DHxHVsPsVQoSTmUhL4SOfktEXalK08l.HeA57h25yLJyO8Iz4xK",
+    "role": "security_family"
+  },
+  {
+    "id": "admin-2",
+    "username": "forensic_admin",
+    "password": "$2b$10$v1DHxHVsPsVQoSTmUhL4SOfktEXalK08l.HeA57h25yLJyO8Iz4xK",
+    "role": "forensic"
+  },
+  {
+    "id": "admin-3",
+    "username": "web_admin",
+    "password": "$2b$10$v1DHxHVsPsVQoSTmUhL4SOfktEXalK08l.HeA57h25yLJyO8Iz4xK",
+    "role": "web_side"
+  },
+  {
+    "id": "admin-4",
+    "username": "corp_admin",
+    "password": "$2b$10$v1DHxHVsPsVQoSTmUhL4SOfktEXalK08l.HeA57h25yLJyO8Iz4xK",
+    "role": "big_company_security"
+  }
+]
