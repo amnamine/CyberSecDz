@@ -42,3 +42,8 @@ next-env.d.ts
 
 # express sqlite database
 backend/data/*.db
+# Database
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
