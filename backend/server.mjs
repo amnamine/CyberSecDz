@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken';
 import { get, initializeDatabase, run } from './db.mjs';
 
 const app = express();
-const PORT = process.env.EXPRESS_PORT || 10000;
+const PORT = process.env.EXPRESS_PORT || 4000;
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback_secret_key_for_dev_only';
 
 app.use(cors());

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 
-const EXPRESS_API_URL = process.env.EXPRESS_API_URL || 'http://localhost:4000';
+const EXPRESS_PORT = process.env.EXPRESS_PORT || '4000';
+const EXPRESS_API_URL = process.env.EXPRESS_API_URL || `http://localhost:${EXPRESS_PORT}`;
 
 export async function forwardToExpress(path: string, payload: unknown) {
   try {

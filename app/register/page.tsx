@@ -53,7 +53,7 @@ export default function RegisterWizard() {
         const loginData = await loginRes.json();
         if (loginRes.ok) {
             localStorage.setItem('auth_token', loginData.token);
-            router.push('/dashboard/user');
+            router.push('/dashboard');
         } else {
             router.push('/login');
         }
