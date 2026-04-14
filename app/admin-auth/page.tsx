@@ -26,7 +26,8 @@ export default function AdminAuthPage() {
         localStorage.setItem('admin_token', data.token);
         
         // Role-based routing
-        if (data.role === 'security_family') router.push('/dashboards/security-family');
+        if (data.role === 'admin') router.push('/admin');
+        else if (data.role === 'security_family') router.push('/dashboards/security-family');
         else if (data.role === 'forensic') router.push('/dashboards/forensics');
         else if (data.role === 'web_side') router.push('/dashboards/web-side');
         else if (data.role === 'big_company_security') router.push('/dashboards/big-company-security');
